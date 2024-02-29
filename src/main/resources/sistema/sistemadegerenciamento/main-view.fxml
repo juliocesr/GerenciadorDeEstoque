@@ -16,16 +16,16 @@
             <TableColumn fx:id="quantidade" prefWidth="150.0" text="QUANTIDADE" />
         </columns>
       </TableView>
-      <Button onAction="#cadastrarNovoItem" layoutX="36.0" layoutY="762.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: GREEN;" text="CADASTRAR" textFill="WHITE">
+      <Button layoutX="36.0" layoutY="762.0" mnemonicParsing="false" onAction="#cadastrarNovoItem" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: GREEN;" text="CADASTRAR" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button onAction="#editarItem" layoutX="307.0" layoutY="763.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: #DAA520;" text="EDITAR" textFill="WHITE">
+      <Button layoutX="307.0" layoutY="763.0" mnemonicParsing="false" onAction="#editarItem" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: #DAA520;" text="EDITAR" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button onAction="#excluirItem" layoutX="172.0" layoutY="762.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: RED;" text="EXCLUIR" textFill="WHITE">
+      <Button layoutX="172.0" layoutY="762.0" mnemonicParsing="false" onAction="#excluirItem" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: RED;" text="EXCLUIR" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -35,5 +35,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Button layoutX="1276.0" layoutY="716.0" mnemonicParsing="false" onAction="#atualizarTabela" prefHeight="35.0" prefWidth="125.0" text="ATUALIZAR TABELA" />
    </children>
 </Pane>

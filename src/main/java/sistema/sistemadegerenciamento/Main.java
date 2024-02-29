@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sistema.sistemadegerenciamento.controller.CadastrarController;
 import sistema.sistemadegerenciamento.controller.MainController;
 import sistema.sistemadegerenciamento.dataBase.ConxaoSQL;
 
@@ -24,7 +25,6 @@ public class Main extends Application {
         }
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("main-view.fxml"));
-
         Parent root = fxmlLoader.load();
         MainController controller = fxmlLoader.getController();
 

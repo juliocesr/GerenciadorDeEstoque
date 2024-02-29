@@ -1,12 +1,10 @@
 package sistema.sistemadegerenciamento.controller;
 
 import javafx.beans.binding.Bindings;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 
-import javafx.scene.control.Button;
+
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
@@ -30,16 +28,13 @@ public class MainController {
     @FXML
     private TableColumn<Estoque, String> quantidade;
     private EstoqueRepository repository;
-    private ObservableList<Estoque> items = FXCollections.observableArrayList();
-
     @FXML
     public void inicializar() {
-        tabela.setItems(items);
         repository = new EstoqueRepository();
         popularTabela();
     }
     @FXML
-    public void cadastrarNovoItem() throws IOException {
+    public void cadastrarNovoItem() throws IOException{
         CadastrarController cadastrar = new CadastrarController();
         cadastrar.abrirModal(new Stage());
     }
@@ -60,15 +55,19 @@ public class MainController {
         }
 
         try {
+            tabela.getItems().clear();
             List<Estoque> dados = repository.getDados();
             id.setCellValueFactory(celula -> Bindings.createObjectBinding(() -> celula.getValue().getId()));
             codigo.setCellValueFactory(celula -> Bindings.createObjectBinding(() -> celula.getValue().getCodigo().toString()));
             produto.setCellValueFactory(celula -> Bindings.createObjectBinding(() -> celula.getValue().getProduto()));
             quantidade.setCellValueFactory(celula -> Bindings.createObjectBinding(() -> celula.getValue().getQuantidade().toString()));
-
             this.tabela.getItems().addAll(dados);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    public void atualizarTabela() {
+        popularTabela();
     }
 }

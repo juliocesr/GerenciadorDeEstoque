@@ -6,25 +6,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="208.0" prefWidth="367.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.sistemadegerenciamento.controller.ExcluiriController">
-   <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="212.0" prefWidth="404.0">
-         <children>
-            <Label layoutX="36.0" layoutY="37.0" text="CODIGO:" />
-            <Label layoutX="209.0" layoutY="38.0" prefHeight="17.0" prefWidth="97.0" text="PRODUTO:" />
-            <TextField layoutX="36.0" layoutY="77.0" />
-            <TextField layoutX="209.0" layoutY="77.0" />
-            <Button layoutX="139.0" layoutY="145.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: RED;" text="EXCLUIR" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </children>
-      </AnchorPane>
-      <Label layoutX="46.0" layoutY="47.0" text="CODIGO:" />
-      <Label layoutX="219.0" layoutY="48.0" prefHeight="17.0" prefWidth="97.0" text="PRODUTO:" />
-      <TextField layoutX="46.0" layoutY="87.0" />
-      <TextField layoutX="219.0" layoutY="87.0" />
-   </children>
+<AnchorPane prefHeight="208.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.sistemadegerenciamento.controller.ExcluiriController">
+      <children>
+         <Label layoutX="36.0" layoutY="37.0" text="CODIGO:" />
+         <Label layoutX="209.0" layoutY="38.0" prefHeight="17.0" prefWidth="97.0" text="PRODUTO:" />
+         <TextField fx:id="codigo" layoutX="36.0" layoutY="77.0" />
+         <TextField fx:id="produto" layoutX="209.0" layoutY="77.0" />
+         <Button layoutX="139.0" layoutY="145.0" mnemonicParsing="false" onAction="#excluirItem" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: RED;" text="EXCLUIR" textFill="WHITE">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+      </children>
 </AnchorPane>
